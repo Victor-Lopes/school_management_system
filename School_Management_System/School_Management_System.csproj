@@ -1,0 +1,599 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4EC061E7-58D1-4639-89E3-0EB055557D31}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>School_Management_System</RootNamespace>
+    <AssemblyName>School_Management_System</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>setup\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <TargetCulture>en-US</TargetCulture>
+    <ProductName>School</ProductName>
+    <PublisherName>School Management System</PublisherName>
+    <ApplicationRevision>9</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>sms-logo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>19D1C3007F1E05044E134D18D26FB00395B6D998</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>School_Management_System_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="app.report">
+      <HintPath>bin\Debug\Framework\app.report.dll</HintPath>
+    </Reference>
+    <Reference Include="Data.Controls">
+      <HintPath>bin\Debug\Framework\Data.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Decleration">
+      <HintPath>bin\Debug\Framework\Decleration.dll</HintPath>
+    </Reference>
+    <Reference Include="Design.Controls">
+      <HintPath>bin\Debug\Framework\Design.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Popup">
+      <HintPath>bin\Debug\Framework\Popup.dll</HintPath>
+    </Reference>
+    <Reference Include="Properties">
+      <HintPath>bin\Debug\Framework\Properties.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Utils.Form">
+      <HintPath>bin\Debug\Framework\Utils.Form.dll</HintPath>
+    </Reference>
+    <Reference Include="Validat">
+      <HintPath>bin\Debug\Framework\Validat.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="sch_operation.cs" />
+    <Compile Include="sms_about.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sms_about.Designer.cs">
+      <DependentUpon>sms_about.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sms_addclassandsection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sms_addclassandsection.Designer.cs">
+      <DependentUpon>sms_addclassandsection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sms_blank.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sms_blank.Designer.cs">
+      <DependentUpon>sms_blank.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sms_branch_school.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sms_branch_school.Designer.cs">
+      <DependentUpon>sms_branch_school.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sms_classinformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sms_classinformation.Designer.cs">
+      <DependentUpon>sms_classinformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sms_create_staff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sms_create_staff.Designer.cs">
+      <DependentUpon>sms_create_staff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sms_create_student.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sms_create_student.Designer.cs">
+      <DependentUpon>sms_create_student.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sms_create_teacher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sms_create_teacher.Designer.cs">
+      <DependentUpon>sms_create_teacher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sms_main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sms_main.Designer.cs">
+      <DependentUpon>sms_main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sms_dashboard_v2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sms_dashboard_v2.Designer.cs">
+      <DependentUpon>sms_dashboard_v2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sms_enroll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sms_enroll.Designer.cs">
+      <DependentUpon>sms_enroll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sms_examination.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sms_examination.Designer.cs">
+      <DependentUpon>sms_examination.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sms_examresult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sms_examresult.Designer.cs">
+      <DependentUpon>sms_examresult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sms_grade_list.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sms_grade_list.Designer.cs">
+      <DependentUpon>sms_grade_list.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sms_help.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sms_help.Designer.cs">
+      <DependentUpon>sms_help.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sms_introduction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sms_introduction.Designer.cs">
+      <DependentUpon>sms_introduction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="sms_level.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sms_level.Designer.cs">
+      <DependentUpon>sms_level.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sms_level_list.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sms_level_list.Designer.cs">
+      <DependentUpon>sms_level_list.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sms_login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sms_login.Designer.cs">
+      <DependentUpon>sms_login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sms_payment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sms_payment.Designer.cs">
+      <DependentUpon>sms_payment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sms_payment_list.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sms_payment_list.Designer.cs">
+      <DependentUpon>sms_payment_list.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sms_payment_report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sms_payment_report.Designer.cs">
+      <DependentUpon>sms_payment_report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sms_school.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sms_school.Designer.cs">
+      <DependentUpon>sms_school.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sms_setexamgrade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sms_setexamgrade.Designer.cs">
+      <DependentUpon>sms_setexamgrade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sms_setExamination.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sms_setExamination.Designer.cs">
+      <DependentUpon>sms_setExamination.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sms_staff_attendance_report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sms_staff_attendance_report.Designer.cs">
+      <DependentUpon>sms_staff_attendance_report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sms_staff_attendence.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sms_staff_attendence.Designer.cs">
+      <DependentUpon>sms_staff_attendence.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sms_staff_list.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sms_staff_list.Designer.cs">
+      <DependentUpon>sms_staff_list.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sms_staff_report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sms_staff_report.Designer.cs">
+      <DependentUpon>sms_staff_report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sms_student_attendance_report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sms_student_attendance_report.Designer.cs">
+      <DependentUpon>sms_student_attendance_report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sms_student_attendence.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sms_student_attendence.Designer.cs">
+      <DependentUpon>sms_student_attendence.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sms_student_list.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sms_student_list.Designer.cs">
+      <DependentUpon>sms_student_list.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sms_student_report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sms_student_report.Designer.cs">
+      <DependentUpon>sms_student_report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sms_student_search.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sms_student_search.Designer.cs">
+      <DependentUpon>sms_student_search.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sms_subject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sms_subject.Designer.cs">
+      <DependentUpon>sms_subject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sms_teacher_attendance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sms_teacher_attendance.Designer.cs">
+      <DependentUpon>sms_teacher_attendance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sms_teacher_attendance_report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sms_teacher_attendance_report.Designer.cs">
+      <DependentUpon>sms_teacher_attendance_report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sms_teacher_list.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sms_teacher_list.Designer.cs">
+      <DependentUpon>sms_teacher_list.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sms_teacher_report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sms_teacher_report.Designer.cs">
+      <DependentUpon>sms_teacher_report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sms_user_account.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sms_user_account.Designer.cs">
+      <DependentUpon>sms_user_account.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sms_user_permission.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sms_user_permission.Designer.cs">
+      <DependentUpon>sms_user_permission.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sms_year_school.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sms_year_school.Designer.cs">
+      <DependentUpon>sms_year_school.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="sms_about.resx">
+      <DependentUpon>sms_about.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sms_addclassandsection.resx">
+      <DependentUpon>sms_addclassandsection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sms_blank.resx">
+      <DependentUpon>sms_blank.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sms_branch_school.resx">
+      <DependentUpon>sms_branch_school.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sms_classinformation.resx">
+      <DependentUpon>sms_classinformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sms_create_staff.resx">
+      <DependentUpon>sms_create_staff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sms_create_student.resx">
+      <DependentUpon>sms_create_student.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sms_create_teacher.resx">
+      <DependentUpon>sms_create_teacher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sms_main.resx">
+      <DependentUpon>sms_main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sms_dashboard_v2.resx">
+      <DependentUpon>sms_dashboard_v2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sms_enroll.resx">
+      <DependentUpon>sms_enroll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sms_examination.resx">
+      <DependentUpon>sms_examination.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sms_examresult.resx">
+      <DependentUpon>sms_examresult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sms_grade_list.resx">
+      <DependentUpon>sms_grade_list.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sms_help.resx">
+      <DependentUpon>sms_help.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sms_introduction.resx">
+      <DependentUpon>sms_introduction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sms_level.resx">
+      <DependentUpon>sms_level.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sms_level_list.resx">
+      <DependentUpon>sms_level_list.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sms_login.resx">
+      <DependentUpon>sms_login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sms_payment.resx">
+      <DependentUpon>sms_payment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sms_payment_list.resx">
+      <DependentUpon>sms_payment_list.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sms_payment_report.resx">
+      <DependentUpon>sms_payment_report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sms_school.resx">
+      <DependentUpon>sms_school.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sms_setexamgrade.resx">
+      <DependentUpon>sms_setexamgrade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sms_setExamination.resx">
+      <DependentUpon>sms_setExamination.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sms_staff_attendance_report.resx">
+      <DependentUpon>sms_staff_attendance_report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sms_staff_attendence.resx">
+      <DependentUpon>sms_staff_attendence.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sms_staff_list.resx">
+      <DependentUpon>sms_staff_list.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sms_staff_report.resx">
+      <DependentUpon>sms_staff_report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sms_student_attendance_report.resx">
+      <DependentUpon>sms_student_attendance_report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sms_student_attendence.resx">
+      <DependentUpon>sms_student_attendence.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sms_student_list.resx">
+      <DependentUpon>sms_student_list.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sms_student_report.resx">
+      <DependentUpon>sms_student_report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sms_student_search.resx">
+      <DependentUpon>sms_student_search.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sms_subject.resx">
+      <DependentUpon>sms_subject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sms_teacher_attendance.resx">
+      <DependentUpon>sms_teacher_attendance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sms_teacher_attendance_report.resx">
+      <DependentUpon>sms_teacher_attendance_report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sms_teacher_list.resx">
+      <DependentUpon>sms_teacher_list.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sms_teacher_report.resx">
+      <DependentUpon>sms_teacher_report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sms_user_account.resx">
+      <DependentUpon>sms_user_account.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sms_user_permission.resx">
+      <DependentUpon>sms_user_permission.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sms_year_school.resx">
+      <DependentUpon>sms_year_school.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="School_Management_System_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\icon32\icons8_Event_Accepted_Tentatively_48px.png" />
+    <None Include="bin\Debug\icon32\icons8_Refresh_Shield_48px.png" />
+    <None Include="bin\Debug\icon32\icons8_Money_Bag_48px.png" />
+    <None Include="bin\Debug\icon32\icons8_Parse_Resume_50px.png" />
+    <None Include="bin\Debug\icon32\icons8_Gears_48px.png" />
+    <None Include="bin\Debug\icon32\icons8_Student_Male_48px.png" />
+    <None Include="bin\Debug\icon32\icons8_School_Director_48px.png" />
+    <None Include="bin\Debug\icon32\icons8_Admin_48px.png" />
+    <None Include="bin\Debug\icon32\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\icon32\icons8_University_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\icon32\sms-logo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\icon32\logo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\icon32\sms-logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add Row_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save Row_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Refresh_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cancel_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Enter_35px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add List_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Trash_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Help_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shutdown_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lock_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dashboard_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User Log_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled-1.png" />
+    <None Include="Resources\Close Window_48px.png" />
+    <Content Include="sms-logo.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
