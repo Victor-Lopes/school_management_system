@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(sms_create_staff));
             this.toolBar1 = new Design.Controls.ToolBar();
             this.label2 = new System.Windows.Forms.Label();
@@ -40,8 +40,8 @@
             this.toolStrip1 = new Design.Controls.ToolStrip();
             this.toolStripButtonNew = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonSave = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButtonRefresh = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButtonCancel = new System.Windows.Forms.ToolStripButton();
             this.panel2 = new Design.Controls.Panel();
             this.dataGridView1 = new Design.Controls.DataGridView();
             this.Education = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -140,7 +140,6 @@
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
-            this.errorProvider1.RightToLeft = true;
             // 
             // toolStrip1
             // 
@@ -151,15 +150,15 @@
             this.toolStripSeparator1,
             this.toolStripButtonSave,
             this.toolStripSeparator2,
-            this.toolStripButton3,
+            this.toolStripButtonRefresh,
             this.toolStripSeparator3,
-            this.toolStripButton4});
+            this.toolStripButtonCancel});
             this.toolStrip1.Location = new System.Drawing.Point(0, 40);
             this.toolStrip1.Margin = new System.Windows.Forms.Padding(0, 0, 0, 5);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.toolStrip1.Size = new System.Drawing.Size(913, 29);
-            this.toolStrip1.TabIndex = 56;
+            this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
             // toolStripButtonNew
@@ -182,29 +181,31 @@
             this.toolStripButtonSave.Text = "Save Record";
             this.toolStripButtonSave.Click += new System.EventHandler(this.toolStripButtonSave_Click);
             // 
-            // toolStripButton3
+            // toolStripButtonRefresh
             // 
-            this.toolStripButton3.Image = global::School_Management_System.Properties.Resources.Refresh_30px;
-            this.toolStripButton3.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(78, 26);
-            this.toolStripButton3.Text = "Refresh";
+            this.toolStripButtonRefresh.Image = global::School_Management_System.Properties.Resources.Refresh_30px;
+            this.toolStripButtonRefresh.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButtonRefresh.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButtonRefresh.Name = "toolStripButtonRefresh";
+            this.toolStripButtonRefresh.Size = new System.Drawing.Size(78, 26);
+            this.toolStripButtonRefresh.Text = "Refresh";
+            this.toolStripButtonRefresh.Click += new System.EventHandler(this.toolStripButtonRefresh_Click);
             // 
-            // toolStripButton4
+            // toolStripButtonCancel
             // 
-            this.toolStripButton4.Image = global::School_Management_System.Properties.Resources.Cancel_30px;
-            this.toolStripButton4.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.Size = new System.Drawing.Size(115, 26);
-            this.toolStripButton4.Text = "Cancel Record";
+            this.toolStripButtonCancel.Image = global::School_Management_System.Properties.Resources.Cancel_30px;
+            this.toolStripButtonCancel.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButtonCancel.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButtonCancel.Name = "toolStripButtonCancel";
+            this.toolStripButtonCancel.Size = new System.Drawing.Size(115, 26);
+            this.toolStripButtonCancel.Text = "Cancel Record";
+            this.toolStripButtonCancel.Click += new System.EventHandler(this.toolStripButtonCancel_Click);
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.dataGridView1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 746);
+            this.panel2.Location = new System.Drawing.Point(0, 742);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(913, 191);
             this.panel2.TabIndex = 60;
@@ -216,14 +217,14 @@
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Education,
@@ -283,7 +284,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 104);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(913, 614);
+            this.panel1.Size = new System.Drawing.Size(913, 610);
             this.panel1.TabIndex = 58;
             // 
             // txtdescription
@@ -292,10 +293,10 @@
             this.txtdescription.BoxHeight = 40;
             this.txtdescription.BoxWidth = 570;
             this.txtdescription.LabelText = "Description :   ";
-            this.txtdescription.Location = new System.Drawing.Point(107, 354);
+            this.txtdescription.Location = new System.Drawing.Point(107, 367);
             this.txtdescription.Name = "txtdescription";
             this.txtdescription.Size = new System.Drawing.Size(765, 46);
-            this.txtdescription.TabIndex = 7;
+            this.txtdescription.TabIndex = 11;
             // 
             // groupBox1
             // 
@@ -307,7 +308,7 @@
             this.groupBox1.Controls.Add(this.cbocity);
             this.groupBox1.Controls.Add(this.txthome);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(0, 423);
+            this.groupBox1.Location = new System.Drawing.Point(0, 417);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(910, 183);
             this.groupBox1.TabIndex = 1;
@@ -331,7 +332,7 @@
             this.cbovillage.ResultText = "";
             this.cbovillage.Size = new System.Drawing.Size(713, 29);
             this.cbovillage.SQL = null;
-            this.cbovillage.TabIndex = 0;
+            this.cbovillage.TabIndex = 3;
             this.cbovillage.TableName = null;
             this.cbovillage.TextBoxText = "";
             // 
@@ -352,7 +353,7 @@
             this.cbodistrict.ResultText = "";
             this.cbodistrict.Size = new System.Drawing.Size(713, 29);
             this.cbodistrict.SQL = null;
-            this.cbodistrict.TabIndex = 0;
+            this.cbodistrict.TabIndex = 2;
             this.cbodistrict.TableName = null;
             this.cbodistrict.TextBoxText = "";
             // 
@@ -373,7 +374,7 @@
             this.cbodivision.ResultText = "";
             this.cbodivision.Size = new System.Drawing.Size(713, 29);
             this.cbodivision.SQL = null;
-            this.cbodivision.TabIndex = 0;
+            this.cbodivision.TabIndex = 1;
             this.cbodivision.TableName = null;
             this.cbodivision.TextBoxText = "";
             // 
@@ -408,7 +409,7 @@
             this.txthome.PasswordChar = '\0';
             this.txthome.ReadOnly = false;
             this.txthome.Size = new System.Drawing.Size(419, 26);
-            this.txthome.TabIndex = 0;
+            this.txthome.TabIndex = 4;
             this.txthome.TextBoxText = "";
             // 
             // picureBrowers1
@@ -418,7 +419,7 @@
             this.picureBrowers1.Name = "picureBrowers1";
             this.picureBrowers1.Path = null;
             this.picureBrowers1.Size = new System.Drawing.Size(142, 187);
-            this.picureBrowers1.TabIndex = 5;
+            this.picureBrowers1.TabIndex = 13;
             this.picureBrowers1.ButtonBrows += new System.EventHandler(this.picureBrowers1_ButtonBrows);
             // 
             // txtphone
@@ -426,12 +427,12 @@
             this.txtphone.BackColor = System.Drawing.Color.Transparent;
             this.txtphone.BoxWidth = 223;
             this.txtphone.LabelText = "Phone number :";
-            this.txtphone.Location = new System.Drawing.Point(106, 359);
+            this.txtphone.Location = new System.Drawing.Point(106, 339);
             this.txtphone.Name = "txtphone";
             this.txtphone.PasswordChar = '\0';
             this.txtphone.ReadOnly = false;
-            this.txtphone.Size = new System.Drawing.Size(425, 26);
-            this.txtphone.TabIndex = 0;
+            this.txtphone.Size = new System.Drawing.Size(463, 26);
+            this.txtphone.TabIndex = 10;
             this.txtphone.TextBoxText = "";
             // 
             // txtemail
@@ -439,12 +440,12 @@
             this.txtemail.BackColor = System.Drawing.Color.Transparent;
             this.txtemail.BoxWidth = 223;
             this.txtemail.LabelText = "Email address :";
-            this.txtemail.Location = new System.Drawing.Point(106, 327);
+            this.txtemail.Location = new System.Drawing.Point(106, 307);
             this.txtemail.Name = "txtemail";
             this.txtemail.PasswordChar = '\0';
             this.txtemail.ReadOnly = false;
-            this.txtemail.Size = new System.Drawing.Size(419, 26);
-            this.txtemail.TabIndex = 0;
+            this.txtemail.Size = new System.Drawing.Size(457, 26);
+            this.txtemail.TabIndex = 9;
             this.txtemail.TextBoxText = "";
             // 
             // txteducation_level
@@ -452,12 +453,12 @@
             this.txteducation_level.BackColor = System.Drawing.Color.Transparent;
             this.txteducation_level.BoxWidth = 223;
             this.txteducation_level.LabelText = "Education level :";
-            this.txteducation_level.Location = new System.Drawing.Point(109, 263);
+            this.txteducation_level.Location = new System.Drawing.Point(109, 243);
             this.txteducation_level.Name = "txteducation_level";
             this.txteducation_level.PasswordChar = '\0';
             this.txteducation_level.ReadOnly = false;
-            this.txteducation_level.Size = new System.Drawing.Size(419, 26);
-            this.txteducation_level.TabIndex = 0;
+            this.txteducation_level.Size = new System.Drawing.Size(457, 26);
+            this.txteducation_level.TabIndex = 7;
             this.txteducation_level.TextBoxText = "";
             // 
             // txtnationality
@@ -465,12 +466,12 @@
             this.txtnationality.BackColor = System.Drawing.Color.Transparent;
             this.txtnationality.BoxWidth = 223;
             this.txtnationality.LabelText = "Nationality :";
-            this.txtnationality.Location = new System.Drawing.Point(109, 231);
+            this.txtnationality.Location = new System.Drawing.Point(109, 211);
             this.txtnationality.Name = "txtnationality";
             this.txtnationality.PasswordChar = '\0';
             this.txtnationality.ReadOnly = false;
-            this.txtnationality.Size = new System.Drawing.Size(419, 26);
-            this.txtnationality.TabIndex = 0;
+            this.txtnationality.Size = new System.Drawing.Size(457, 26);
+            this.txtnationality.TabIndex = 6;
             this.txtnationality.TextBoxText = "";
             // 
             // txtlastname_kh
@@ -478,25 +479,27 @@
             this.txtlastname_kh.BackColor = System.Drawing.Color.Transparent;
             this.txtlastname_kh.BoxWidth = 223;
             this.txtlastname_kh.LabelText = "Last name khmer :";
-            this.txtlastname_kh.Location = new System.Drawing.Point(109, 137);
+            this.txtlastname_kh.Location = new System.Drawing.Point(109, 117);
             this.txtlastname_kh.Name = "txtlastname_kh";
             this.txtlastname_kh.PasswordChar = '\0';
             this.txtlastname_kh.ReadOnly = false;
-            this.txtlastname_kh.Size = new System.Drawing.Size(419, 26);
-            this.txtlastname_kh.TabIndex = 0;
+            this.txtlastname_kh.Size = new System.Drawing.Size(457, 26);
+            this.txtlastname_kh.TabIndex = 3;
             this.txtlastname_kh.TextBoxText = "";
+            this.txtlastname_kh.Enter += new System.EventHandler(this.txtlastname_kh_Enter);
+            this.txtlastname_kh.Leave += new System.EventHandler(this.txtlastname_kh_Leave);
             // 
             // txtlastname_en
             // 
             this.txtlastname_en.BackColor = System.Drawing.Color.Transparent;
             this.txtlastname_en.BoxWidth = 223;
             this.txtlastname_en.LabelText = "Last name english :";
-            this.txtlastname_en.Location = new System.Drawing.Point(109, 73);
+            this.txtlastname_en.Location = new System.Drawing.Point(109, 53);
             this.txtlastname_en.Name = "txtlastname_en";
             this.txtlastname_en.PasswordChar = '\0';
             this.txtlastname_en.ReadOnly = false;
-            this.txtlastname_en.Size = new System.Drawing.Size(419, 26);
-            this.txtlastname_en.TabIndex = 0;
+            this.txtlastname_en.Size = new System.Drawing.Size(457, 26);
+            this.txtlastname_en.TabIndex = 1;
             this.txtlastname_en.TextBoxText = "";
             // 
             // txtfirstname_kh
@@ -504,24 +507,25 @@
             this.txtfirstname_kh.BackColor = System.Drawing.Color.Transparent;
             this.txtfirstname_kh.BoxWidth = 223;
             this.txtfirstname_kh.LabelText = "First name khmer :";
-            this.txtfirstname_kh.Location = new System.Drawing.Point(109, 105);
+            this.txtfirstname_kh.Location = new System.Drawing.Point(109, 85);
             this.txtfirstname_kh.Name = "txtfirstname_kh";
             this.txtfirstname_kh.PasswordChar = '\0';
             this.txtfirstname_kh.ReadOnly = false;
-            this.txtfirstname_kh.Size = new System.Drawing.Size(419, 26);
-            this.txtfirstname_kh.TabIndex = 0;
+            this.txtfirstname_kh.Size = new System.Drawing.Size(457, 26);
+            this.txtfirstname_kh.TabIndex = 2;
             this.txtfirstname_kh.TextBoxText = "";
+            this.txtfirstname_kh.Enter += new System.EventHandler(this.txtfirstname_kh_Enter);
             // 
             // txtfirstname_en
             // 
             this.txtfirstname_en.BackColor = System.Drawing.Color.Transparent;
             this.txtfirstname_en.BoxWidth = 223;
             this.txtfirstname_en.LabelText = "First name english :";
-            this.txtfirstname_en.Location = new System.Drawing.Point(109, 41);
+            this.txtfirstname_en.Location = new System.Drawing.Point(109, 21);
             this.txtfirstname_en.Name = "txtfirstname_en";
             this.txtfirstname_en.PasswordChar = '\0';
             this.txtfirstname_en.ReadOnly = false;
-            this.txtfirstname_en.Size = new System.Drawing.Size(419, 26);
+            this.txtfirstname_en.Size = new System.Drawing.Size(457, 26);
             this.txtfirstname_en.TabIndex = 0;
             this.txtfirstname_en.TextBoxText = "";
             // 
@@ -533,10 +537,10 @@
             this.cbostatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbostatus.Item = null;
             this.cbostatus.LabelText = "Status :";
-            this.cbostatus.Location = new System.Drawing.Point(455, 327);
+            this.cbostatus.Location = new System.Drawing.Point(455, 307);
             this.cbostatus.Name = "cbostatus";
-            this.cbostatus.Size = new System.Drawing.Size(431, 26);
-            this.cbostatus.TabIndex = 2;
+            this.cbostatus.Size = new System.Drawing.Size(469, 26);
+            this.cbostatus.TabIndex = 12;
             // 
             // cboposition
             // 
@@ -546,10 +550,10 @@
             this.cboposition.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboposition.Item = null;
             this.cboposition.LabelText = "Position :";
-            this.cboposition.Location = new System.Drawing.Point(106, 295);
+            this.cboposition.Location = new System.Drawing.Point(106, 275);
             this.cboposition.Name = "cboposition";
-            this.cboposition.Size = new System.Drawing.Size(419, 26);
-            this.cboposition.TabIndex = 2;
+            this.cboposition.Size = new System.Drawing.Size(457, 26);
+            this.cboposition.TabIndex = 8;
             // 
             // cbogender
             // 
@@ -559,10 +563,10 @@
             this.cbogender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbogender.Item = null;
             this.cbogender.LabelText = "Gender :";
-            this.cbogender.Location = new System.Drawing.Point(106, 169);
+            this.cbogender.Location = new System.Drawing.Point(106, 149);
             this.cbogender.Name = "cbogender";
-            this.cbogender.Size = new System.Drawing.Size(419, 26);
-            this.cbogender.TabIndex = 2;
+            this.cbogender.Size = new System.Drawing.Size(457, 26);
+            this.cbogender.TabIndex = 4;
             // 
             // dtpbod
             // 
@@ -571,17 +575,17 @@
             this.dtpbod.EnableDate = true;
             this.dtpbod.FormatDateTime = Utils.Form.DateTimeFormat.DdMmMyyyy;
             this.dtpbod.LabelText = "Bith of date :";
-            this.dtpbod.Location = new System.Drawing.Point(109, 201);
+            this.dtpbod.Location = new System.Drawing.Point(109, 181);
             this.dtpbod.Name = "dtpbod";
-            this.dtpbod.Size = new System.Drawing.Size(422, 24);
-            this.dtpbod.TabIndex = 1;
+            this.dtpbod.Size = new System.Drawing.Size(460, 24);
+            this.dtpbod.TabIndex = 5;
             // 
             // buttonGroup2
             // 
             this.buttonGroup2.Dock = System.Windows.Forms.DockStyle.Top;
             this.buttonGroup2.DrownImage = ((System.Drawing.Image)(resources.GetObject("buttonGroup2.DrownImage")));
             this.buttonGroup2.ImageShowDetail = Design.Controls.ButtonGroup.Arrow.Down;
-            this.buttonGroup2.Location = new System.Drawing.Point(0, 718);
+            this.buttonGroup2.Location = new System.Drawing.Point(0, 714);
             this.buttonGroup2.Name = "buttonGroup2";
             this.buttonGroup2.Owner = this.panel2;
             this.buttonGroup2.Size = new System.Drawing.Size(913, 28);
@@ -612,7 +616,7 @@
             this.panel3.Controls.Add(this.txtfather_position);
             this.panel3.Controls.Add(this.txtfathername);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 965);
+            this.panel3.Location = new System.Drawing.Point(0, 961);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(913, 262);
             this.panel3.TabIndex = 62;
@@ -627,7 +631,7 @@
             this.txtmother_phone.PasswordChar = '\0';
             this.txtmother_phone.ReadOnly = false;
             this.txtmother_phone.Size = new System.Drawing.Size(419, 26);
-            this.txtmother_phone.TabIndex = 0;
+            this.txtmother_phone.TabIndex = 5;
             this.txtmother_phone.TextBoxText = "";
             // 
             // txtmother_position
@@ -640,7 +644,7 @@
             this.txtmother_position.PasswordChar = '\0';
             this.txtmother_position.ReadOnly = false;
             this.txtmother_position.Size = new System.Drawing.Size(443, 26);
-            this.txtmother_position.TabIndex = 0;
+            this.txtmother_position.TabIndex = 4;
             this.txtmother_position.TextBoxText = "";
             // 
             // txtfather_phone
@@ -653,7 +657,7 @@
             this.txtfather_phone.PasswordChar = '\0';
             this.txtfather_phone.ReadOnly = false;
             this.txtfather_phone.Size = new System.Drawing.Size(443, 26);
-            this.txtfather_phone.TabIndex = 0;
+            this.txtfather_phone.TabIndex = 2;
             this.txtfather_phone.TextBoxText = "";
             // 
             // txtmothername
@@ -666,7 +670,7 @@
             this.txtmothername.PasswordChar = '\0';
             this.txtmothername.ReadOnly = false;
             this.txtmothername.Size = new System.Drawing.Size(443, 26);
-            this.txtmothername.TabIndex = 0;
+            this.txtmothername.TabIndex = 3;
             this.txtmothername.TextBoxText = "";
             // 
             // txtfather_position
@@ -679,7 +683,7 @@
             this.txtfather_position.PasswordChar = '\0';
             this.txtfather_position.ReadOnly = false;
             this.txtfather_position.Size = new System.Drawing.Size(443, 26);
-            this.txtfather_position.TabIndex = 0;
+            this.txtfather_position.TabIndex = 1;
             this.txtfather_position.TextBoxText = "";
             // 
             // txtfathername
@@ -700,7 +704,7 @@
             this.buttonGroup3.Dock = System.Windows.Forms.DockStyle.Top;
             this.buttonGroup3.DrownImage = ((System.Drawing.Image)(resources.GetObject("buttonGroup3.DrownImage")));
             this.buttonGroup3.ImageShowDetail = Design.Controls.ButtonGroup.Arrow.Down;
-            this.buttonGroup3.Location = new System.Drawing.Point(0, 937);
+            this.buttonGroup3.Location = new System.Drawing.Point(0, 933);
             this.buttonGroup3.Name = "buttonGroup3";
             this.buttonGroup3.Owner = this.panel3;
             this.buttonGroup3.Size = new System.Drawing.Size(913, 28);
@@ -745,8 +749,8 @@
 
         private Design.Controls.ToolBar toolBar1;
         private System.Windows.Forms.Label label2;
-        public System.Windows.Forms.ToolStripButton toolStripButton4;
-        public System.Windows.Forms.ToolStripButton toolStripButton3;
+        public System.Windows.Forms.ToolStripButton toolStripButtonCancel;
+        public System.Windows.Forms.ToolStripButton toolStripButtonRefresh;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;

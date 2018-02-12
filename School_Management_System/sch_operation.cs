@@ -4,9 +4,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.IO;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace School_Management_System
@@ -643,5 +641,17 @@ namespace School_Management_System
             Settings.Default.Save();
         }
 
+        public void Set2Kh()
+        {
+            //if (Application.CurrentInputLanguage.Culture.Name != "km-KH")
+            //    SendKeys.Send("+%");
+            InputLanguage.CurrentInputLanguage = InputLanguage.InstalledInputLanguages[1];
+        }
+        public void Set2En()
+        {
+            //if (Application.CurrentInputLanguage.Culture.Name != "us-US")
+            //    SendKeys.Send("+%");
+            InputLanguage.CurrentInputLanguage = InputLanguage.InstalledInputLanguages[0];
+        }
     }
 }
