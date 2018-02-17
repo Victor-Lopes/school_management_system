@@ -51,7 +51,7 @@ namespace School_Management_System
         
         private void newStaffToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            sms_create_staff sms = new sms_create_staff();
+            sms_create_staff sms = new sms_create_staff("","");
             showForm(sms);
         }
 
@@ -331,7 +331,7 @@ namespace School_Management_System
 
         private void panelstaff_MouseClick(object sender, MouseEventArgs e)
         {
-            sms_create_staff sms = new sms_create_staff();
+            sms_create_staff sms = new sms_create_staff("","");
             showForm(sms);
         }
 

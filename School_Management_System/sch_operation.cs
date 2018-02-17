@@ -170,8 +170,8 @@ namespace School_Management_System
             {
                 int n = ctr.GetUpperBound(0);
                 setConnection();
-                //sqlCmd = new SqlCommand(sql, sqlCon);
-                sqlcmd = new SqlCommand("dbo.spRunSQL", sqlcon);
+                //sqlcmd = new SqlCommand(sql, sqlcon);
+                sqlcmd = new SqlCommand("dbo.spRunSql", sqlcon);
                 sqlcmd.CommandType = CommandType.StoredProcedure;
                 sqlcmd.Parameters.Add("@sql", SqlDbType.NText).Value = sql;
                 sqldr = sqlcmd.ExecuteReader();
@@ -179,13 +179,14 @@ namespace School_Management_System
                 {
                     for (int i = 0; i <= n; i++)
                     {
-                        ctr[i].Text = sqldr.GetValue(i).ToString();
+                        ctr[i].Text = sqldr[i].ToString();
                     }
                 }
-                //sqlDR.Close();
+                sqldr.Close();
                 sqlcmd.Dispose();
             }
-            catch (Exception ex) { //MessageBox.Show(ex.Message); 
+            catch (Exception ex) { 
+                MessageBox.Show(ex.Message); 
             }
         }
 
@@ -431,20 +432,32 @@ namespace School_Management_System
             Gv.DataSource = objdt;
         }
 
-        //public void bindGridView(DataGridView Gv, string sql)
-        //{
-        //    setConnection();
-        //    sqlCmd = sqlCon.CreateCommand();
-        //    sqlCmd = new SqlCommand();
-        //    sqlCmd.Connection = sqlCon;
-        //    sqlCmd.CommandType = CommandType.Text;
-
-        //    objDA = new SqlDataAdapter(sql, sqlCon);
-        //    objDT = new DataTable();
-        //    objDA.Fill(objDT);
-
-        //    Gv.DataSource = objDT;
-        //}
+        public void bindGridView(DataGridView Gv, string sql,string status)
+        {
+            setConnection();
+            sqlcmd = new SqlCommand(sql, sqlcon);
+            sqldr = sqlcmd.ExecuteReader();
+            try{
+            
+                    int i = 0;
+                    while (sqldr.Read())
+                    {
+                        Gv.Rows[i].Cells["Education"].Value = sqldr["education"].ToString();
+                        Gv.Rows[i].Cells["EducationName"].Value = sqldr["education_name"].ToString();
+                        Gv.Rows[i].Cells["StartYear"].Value = sqldr["start_year"].ToString();
+                        Gv.Rows[i].Cells["EndYear"].Value = sqldr["end_year"].ToString();
+                        Gv.Rows[i].Cells["Description"].Value = sqldr["description"].ToString();
+                        i++;
+                    }
+                  //What to write here while my DataGridView Name is ufGView and it has 
+                  //4 column. Names are Id, IdNo{TextBox}, Status{CheckBox}, Action{HyperLink}
+               
+            }
+            catch (Exception exp)
+            {
+                   MessageBox.Show(exp.Message.ToString(), "Exception in CheckFamilyMembers");
+            }
+        }
 
         internal void autoSizeModeDataGrind(DataGridView dataGridView1)
         {

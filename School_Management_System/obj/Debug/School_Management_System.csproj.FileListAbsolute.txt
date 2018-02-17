@@ -74,6 +74,7 @@ E:\Year 4\M.I.S\School_Management_System\School_Management_System\obj\Debug\Scho
 C:\Users\Karona\Desktop\AssHS\School_Management_System\School_Management_System\bin\Debug\School_Management_System.exe.config
 C:\Users\Karona\Desktop\AssHS\School_Management_System\School_Management_System\obj\Debug\School_Management_System.exe
 C:\Users\Karona\Desktop\AssHS\School_Management_System\School_Management_System\obj\Debug\School_Management_System.pdb
+<<<<<<< HEAD
 C:\Users\Karona\Desktop\AssHS\School_Management_System\School_Management_System\bin\Debug\School_Management_System.exe.manifest
 C:\Users\Karona\Desktop\AssHS\School_Management_System\School_Management_System\bin\Debug\School_Management_System.application
 C:\Users\Karona\Desktop\AssHS\School_Management_System\School_Management_System\bin\Debug\School_Management_System.exe
@@ -133,3 +134,5 @@ C:\Users\Karona\Desktop\AssHS\School_Management_System\School_Management_System\
 C:\Users\Karona\Desktop\AssHS\School_Management_System\School_Management_System\obj\Debug\School_Management_System.csproj.GenerateResource.Cache
 C:\Users\Karona\Desktop\AssHS\School_Management_System\School_Management_System\obj\Debug\School_Management_System.exe.manifest
 C:\Users\Karona\Desktop\AssHS\School_Management_System\School_Management_System\obj\Debug\School_Management_System.application
+=======
+>>>>>>> 4c1b7c363b3cb2bd3f1e8eb7a35472be4c33fb9e

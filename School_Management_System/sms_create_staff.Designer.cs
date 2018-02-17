@@ -28,7 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(sms_create_staff));
             this.toolBar1 = new Design.Controls.ToolBar();
             this.label2 = new System.Windows.Forms.Label();
@@ -43,21 +49,21 @@
             this.toolStripButtonRefresh = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonCancel = new System.Windows.Forms.ToolStripButton();
             this.panel2 = new Design.Controls.Panel();
-            this.dataGridView1 = new Design.Controls.DataGridView();
-            this.Education = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Startyear = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Endyear = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new Design.Controls.Panel();
-            this.txtdescription = new Design.Controls.TextBoxLabelMultiLine();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cbovillage = new Design.Controls.SearchButtonBox();
             this.cbodistrict = new Design.Controls.SearchButtonBox();
             this.cbodivision = new Design.Controls.SearchButtonBox();
             this.cbocity = new Design.Controls.SearchButtonBox();
             this.txthome = new Design.Controls.TextBoxLabel();
+            this.txtdescription = new Design.Controls.TextBoxLabelMultiLine();
             this.picureBrowers1 = new Design.Controls.PicureBrowers();
             this.txtphone = new Design.Controls.TextBoxLabel();
+            this.txtsalary = new Design.Controls.TextBoxLabel();
             this.txtemail = new Design.Controls.TextBoxLabel();
             this.txteducation_level = new Design.Controls.TextBoxLabel();
             this.txtnationality = new Design.Controls.TextBoxLabel();
@@ -84,7 +90,6 @@
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -205,7 +210,7 @@
             // 
             this.panel2.Controls.Add(this.dataGridView1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 742);
+            this.panel2.Location = new System.Drawing.Point(0, 754);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(913, 191);
             this.panel2.TabIndex = 60;
@@ -213,63 +218,89 @@
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToResizeRows = false;
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SunkenHorizontal;
+            this.dataGridView1.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Khmer OS Siemreap", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView1.ColumnHeadersHeight = 30;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Education,
-            this.Startyear,
-            this.Endyear,
-            this.Description});
-            this.dataGridView1.EditRows = true;
-            this.dataGridView1.EnableHeadersVisualStyles = false;
-            this.dataGridView1.Font = new System.Drawing.Font("Khmer OS Siemreap", 9F);
-            this.dataGridView1.GridColor = System.Drawing.Color.Gainsboro;
-            this.dataGridView1.Location = new System.Drawing.Point(69, 20);
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4});
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Khmer OS Siemreap", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle6;
+            this.dataGridView1.Location = new System.Drawing.Point(69, 6);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.RowTemplate.Height = 30;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Khmer OS Siemreap", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(750, 150);
-            this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.Size = new System.Drawing.Size(750, 166);
+            this.dataGridView1.TabIndex = 1;
             // 
-            // Education
+            // Column1
             // 
-            this.Education.HeaderText = "Education name";
-            this.Education.Name = "Education";
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            this.Column1.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Column1.HeaderText = "Education Name";
+            this.Column1.Name = "Column1";
             // 
-            // Startyear
+            // Column2
             // 
-            this.Startyear.HeaderText = "Start year";
-            this.Startyear.Name = "Startyear";
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            this.Column2.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Column2.HeaderText = "Start Year";
+            this.Column2.Name = "Column2";
             // 
-            // Endyear
+            // Column3
             // 
-            this.Endyear.HeaderText = "End year";
-            this.Endyear.Name = "Endyear";
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.Column3.DefaultCellStyle = dataGridViewCellStyle4;
+            this.Column3.HeaderText = "End Year";
+            this.Column3.Name = "Column3";
             // 
-            // Description
+            // Column4
             // 
-            this.Description.HeaderText = "Description";
-            this.Description.Name = "Description";
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            this.Column4.DefaultCellStyle = dataGridViewCellStyle5;
+            this.Column4.HeaderText = "Description";
+            this.Column4.Name = "Column4";
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.cbovillage);
+            this.panel1.Controls.Add(this.cbodistrict);
+            this.panel1.Controls.Add(this.cbodivision);
+            this.panel1.Controls.Add(this.cbocity);
+            this.panel1.Controls.Add(this.txthome);
             this.panel1.Controls.Add(this.txtdescription);
-            this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.picureBrowers1);
             this.panel1.Controls.Add(this.txtphone);
+            this.panel1.Controls.Add(this.txtsalary);
             this.panel1.Controls.Add(this.txtemail);
             this.panel1.Controls.Add(this.txteducation_level);
             this.panel1.Controls.Add(this.txtnationality);
@@ -284,36 +315,8 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 104);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(913, 610);
+            this.panel1.Size = new System.Drawing.Size(913, 622);
             this.panel1.TabIndex = 58;
-            // 
-            // txtdescription
-            // 
-            this.txtdescription.BackColor = System.Drawing.Color.Transparent;
-            this.txtdescription.BoxHeight = 40;
-            this.txtdescription.BoxWidth = 570;
-            this.txtdescription.LabelText = "Description :   ";
-            this.txtdescription.Location = new System.Drawing.Point(107, 367);
-            this.txtdescription.Name = "txtdescription";
-            this.txtdescription.Size = new System.Drawing.Size(765, 46);
-            this.txtdescription.TabIndex = 11;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.Controls.Add(this.cbovillage);
-            this.groupBox1.Controls.Add(this.cbodistrict);
-            this.groupBox1.Controls.Add(this.cbodivision);
-            this.groupBox1.Controls.Add(this.cbocity);
-            this.groupBox1.Controls.Add(this.txthome);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(0, 417);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(910, 183);
-            this.groupBox1.TabIndex = 1;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Address ";
             // 
             // cbovillage
             // 
@@ -326,13 +329,13 @@
             this.cbovillage.Id = null;
             this.cbovillage.isSearch = false;
             this.cbovillage.LabelText = "Village :";
-            this.cbovillage.Location = new System.Drawing.Point(106, 113);
+            this.cbovillage.Location = new System.Drawing.Point(108, 546);
             this.cbovillage.name = null;
             this.cbovillage.Name = "cbovillage";
             this.cbovillage.ResultText = "";
             this.cbovillage.Size = new System.Drawing.Size(713, 29);
             this.cbovillage.SQL = null;
-            this.cbovillage.TabIndex = 3;
+            this.cbovillage.TabIndex = 17;
             this.cbovillage.TableName = null;
             this.cbovillage.TextBoxText = "";
             // 
@@ -347,13 +350,13 @@
             this.cbodistrict.Id = null;
             this.cbodistrict.isSearch = false;
             this.cbodistrict.LabelText = "District :";
-            this.cbodistrict.Location = new System.Drawing.Point(106, 78);
+            this.cbodistrict.Location = new System.Drawing.Point(108, 511);
             this.cbodistrict.name = null;
             this.cbodistrict.Name = "cbodistrict";
             this.cbodistrict.ResultText = "";
             this.cbodistrict.Size = new System.Drawing.Size(713, 29);
             this.cbodistrict.SQL = null;
-            this.cbodistrict.TabIndex = 2;
+            this.cbodistrict.TabIndex = 16;
             this.cbodistrict.TableName = null;
             this.cbodistrict.TextBoxText = "";
             // 
@@ -368,13 +371,13 @@
             this.cbodivision.Id = null;
             this.cbodivision.isSearch = false;
             this.cbodivision.LabelText = "Division :";
-            this.cbodivision.Location = new System.Drawing.Point(106, 43);
+            this.cbodivision.Location = new System.Drawing.Point(108, 476);
             this.cbodivision.name = null;
             this.cbodivision.Name = "cbodivision";
             this.cbodivision.ResultText = "";
             this.cbodivision.Size = new System.Drawing.Size(713, 29);
             this.cbodivision.SQL = null;
-            this.cbodivision.TabIndex = 1;
+            this.cbodivision.TabIndex = 15;
             this.cbodivision.TableName = null;
             this.cbodivision.TextBoxText = "";
             // 
@@ -389,13 +392,13 @@
             this.cbocity.Id = null;
             this.cbocity.isSearch = false;
             this.cbocity.LabelText = "City / Province :";
-            this.cbocity.Location = new System.Drawing.Point(106, 8);
+            this.cbocity.Location = new System.Drawing.Point(108, 441);
             this.cbocity.name = null;
             this.cbocity.Name = "cbocity";
             this.cbocity.ResultText = "";
             this.cbocity.Size = new System.Drawing.Size(713, 29);
             this.cbocity.SQL = null;
-            this.cbocity.TabIndex = 0;
+            this.cbocity.TabIndex = 14;
             this.cbocity.TableName = null;
             this.cbocity.TextBoxText = "";
             // 
@@ -404,13 +407,24 @@
             this.txthome.BackColor = System.Drawing.Color.Transparent;
             this.txthome.BoxWidth = 223;
             this.txthome.LabelText = "Home :";
-            this.txthome.Location = new System.Drawing.Point(106, 146);
+            this.txthome.Location = new System.Drawing.Point(108, 579);
             this.txthome.Name = "txthome";
             this.txthome.PasswordChar = '\0';
             this.txthome.ReadOnly = false;
             this.txthome.Size = new System.Drawing.Size(419, 26);
-            this.txthome.TabIndex = 4;
+            this.txthome.TabIndex = 18;
             this.txthome.TextBoxText = "";
+            // 
+            // txtdescription
+            // 
+            this.txtdescription.BackColor = System.Drawing.Color.Transparent;
+            this.txtdescription.BoxHeight = 40;
+            this.txtdescription.BoxWidth = 570;
+            this.txtdescription.LabelText = "Description :   ";
+            this.txtdescription.Location = new System.Drawing.Point(107, 395);
+            this.txtdescription.Name = "txtdescription";
+            this.txtdescription.Size = new System.Drawing.Size(765, 46);
+            this.txtdescription.TabIndex = 11;
             // 
             // picureBrowers1
             // 
@@ -427,7 +441,7 @@
             this.txtphone.BackColor = System.Drawing.Color.Transparent;
             this.txtphone.BoxWidth = 223;
             this.txtphone.LabelText = "Phone number :";
-            this.txtphone.Location = new System.Drawing.Point(106, 339);
+            this.txtphone.Location = new System.Drawing.Point(106, 367);
             this.txtphone.Name = "txtphone";
             this.txtphone.PasswordChar = '\0';
             this.txtphone.ReadOnly = false;
@@ -435,12 +449,25 @@
             this.txtphone.TabIndex = 10;
             this.txtphone.TextBoxText = "";
             // 
+            // txtsalary
+            // 
+            this.txtsalary.BackColor = System.Drawing.Color.Transparent;
+            this.txtsalary.BoxWidth = 223;
+            this.txtsalary.LabelText = "Salary :";
+            this.txtsalary.Location = new System.Drawing.Point(107, 305);
+            this.txtsalary.Name = "txtsalary";
+            this.txtsalary.PasswordChar = '\0';
+            this.txtsalary.ReadOnly = false;
+            this.txtsalary.Size = new System.Drawing.Size(457, 26);
+            this.txtsalary.TabIndex = 9;
+            this.txtsalary.TextBoxText = "";
+            // 
             // txtemail
             // 
             this.txtemail.BackColor = System.Drawing.Color.Transparent;
             this.txtemail.BoxWidth = 223;
             this.txtemail.LabelText = "Email address :";
-            this.txtemail.Location = new System.Drawing.Point(106, 307);
+            this.txtemail.Location = new System.Drawing.Point(106, 335);
             this.txtemail.Name = "txtemail";
             this.txtemail.PasswordChar = '\0';
             this.txtemail.ReadOnly = false;
@@ -537,7 +564,7 @@
             this.cbostatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbostatus.Item = null;
             this.cbostatus.LabelText = "Status :";
-            this.cbostatus.Location = new System.Drawing.Point(455, 307);
+            this.cbostatus.Location = new System.Drawing.Point(455, 335);
             this.cbostatus.Name = "cbostatus";
             this.cbostatus.Size = new System.Drawing.Size(469, 26);
             this.cbostatus.TabIndex = 12;
@@ -585,7 +612,7 @@
             this.buttonGroup2.Dock = System.Windows.Forms.DockStyle.Top;
             this.buttonGroup2.DrownImage = ((System.Drawing.Image)(resources.GetObject("buttonGroup2.DrownImage")));
             this.buttonGroup2.ImageShowDetail = Design.Controls.ButtonGroup.Arrow.Down;
-            this.buttonGroup2.Location = new System.Drawing.Point(0, 714);
+            this.buttonGroup2.Location = new System.Drawing.Point(0, 726);
             this.buttonGroup2.Name = "buttonGroup2";
             this.buttonGroup2.Owner = this.panel2;
             this.buttonGroup2.Size = new System.Drawing.Size(913, 28);
@@ -616,7 +643,7 @@
             this.panel3.Controls.Add(this.txtfather_position);
             this.panel3.Controls.Add(this.txtfathername);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 961);
+            this.panel3.Location = new System.Drawing.Point(0, 973);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(913, 262);
             this.panel3.TabIndex = 62;
@@ -704,7 +731,7 @@
             this.buttonGroup3.Dock = System.Windows.Forms.DockStyle.Top;
             this.buttonGroup3.DrownImage = ((System.Drawing.Image)(resources.GetObject("buttonGroup3.DrownImage")));
             this.buttonGroup3.ImageShowDetail = Design.Controls.ButtonGroup.Arrow.Down;
-            this.buttonGroup3.Location = new System.Drawing.Point(0, 933);
+            this.buttonGroup3.Location = new System.Drawing.Point(0, 945);
             this.buttonGroup3.Name = "buttonGroup3";
             this.buttonGroup3.Owner = this.panel3;
             this.buttonGroup3.Size = new System.Drawing.Size(913, 28);
@@ -738,7 +765,6 @@
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -775,12 +801,6 @@
         private Design.Controls.ComboBoxLabel cbogender;
         private Design.Controls.DateTimePIckerLabel dtpbod;
         private Design.Controls.ButtonGroup buttonGroup1;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private Design.Controls.SearchButtonBox cbovillage;
-        private Design.Controls.SearchButtonBox cbodistrict;
-        private Design.Controls.SearchButtonBox cbodivision;
-        private Design.Controls.SearchButtonBox cbocity;
-        private Design.Controls.TextBoxLabel txthome;
         private Design.Controls.Panel panel3;
         private Design.Controls.TextBoxLabel txtmother_phone;
         private Design.Controls.TextBoxLabel txtmother_position;
@@ -789,12 +809,18 @@
         private Design.Controls.TextBoxLabel txtfather_position;
         private Design.Controls.TextBoxLabel txtfathername;
         private Design.Controls.ButtonGroup buttonGroup3;
-        private Design.Controls.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Education;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Startyear;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Endyear;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Description;
         private Design.Controls.TextBoxLabelMultiLine txtdescription;
         private Design.Controls.ComboBoxLabel cbostatus;
+        private Design.Controls.SearchButtonBox cbovillage;
+        private Design.Controls.SearchButtonBox cbodistrict;
+        private Design.Controls.SearchButtonBox cbodivision;
+        private Design.Controls.SearchButtonBox cbocity;
+        private Design.Controls.TextBoxLabel txthome;
+        private Design.Controls.TextBoxLabel txtsalary;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
     }
 }
