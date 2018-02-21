@@ -2,27 +2,26 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Excel = Microsoft.Office.Interop.Excel;
 
 namespace School_Management_System
 {
-    public partial class sms_staff_list : Form
+    public partial class sms_subject_list : Form
     {
         sch_operation op = new sch_operation();
-        string sql, items="10";
-        string status = "null",staffid;
-        public sms_staff_list()
+        string sql;
+        string items;
+        string subjectid;
+        public sms_subject_list()
         {
             InitializeComponent();
         }
 
-        private void sms_staff_list_Load(object sender, EventArgs e)
+        private void sms_subject_list_Load(object sender, EventArgs e)
         {
             refreshData();
             sch_operation.bindComboBoxFilter(dataGridView1, cbosearch_by);
@@ -31,7 +30,7 @@ namespace School_Management_System
             dataGridView1.ColumnHeadersDefaultCellStyle.ForeColor = Color.Black;
             dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dataGridView1_RowPostPaint);
-            
+
         }
 
         private void dataGridView1_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
@@ -47,7 +46,7 @@ namespace School_Management_System
             try
             {
                 cboItems.SelectedIndex = 1;
-                sql = "select top " + items + " * from sch_v_staff order by Hired_Date";
+                sql = "select top " + items + " * from sch_v_subject order by Hired_Date";
                 op.bindGridView(dataGridView1, sql);
                 op.autoSizeModeDataGrind(dataGridView1);
                 lb_rows.Text = "Showing : " + dataGridView1.RowCount.ToString() + " entries";
@@ -55,32 +54,25 @@ namespace School_Management_System
             catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
 
-        private void refreshToolStripMenuItem_Click(object sender, EventArgs e)
+        private void cboItems_SelectedIndexChanged(object sender, EventArgs e)
         {
-            refreshData();
-            sch_operation.bindComboBoxFilter(dataGridView1, cbosearch_by); 
-        }
+            items = cboItems.Text;
+            try
+            {
+                if (items == "All")
+                {
+                    sql = "select * from sch_v_subject order by Hired_Date";
+                }
+                else
+                {
+                    sql = "select top " + items + " * from sch_v_subject order by Hired_Date";
+                }
 
-        private void editRecordToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            status = "old";
-            sms_create_staff staff = new sms_create_staff(status, staffid);
-            staff.ShowDialog();
-        }
-
-        private void dataGridView1_SelectionChanged(object sender, EventArgs e)
-        {
-            if (dataGridView1.SelectedRows.Count > 0) // make sure user select at least 1 row 
-            {               
-                staffid = dataGridView1.SelectedRows[0].Cells[0].Value + string.Empty;
+                op.bindGridView(dataGridView1, sql);
+                op.autoSizeModeDataGrind(dataGridView1);
+                lb_rows.Text = "Showing : " + dataGridView1.RowCount.ToString() + " entries";
             }
-        }
-
-        private void btnnew_staff_Click(object sender, EventArgs e)
-        {
-            status = "new";
-            sms_create_staff staff = new sms_create_staff(status, staffid);
-            staff.ShowDialog();
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
 
         private void txtsearch_TextChanged(object sender, EventArgs e)
@@ -104,36 +96,29 @@ namespace School_Management_System
             }
         }
 
-        private void cboItems_SelectedIndexChanged(object sender, EventArgs e)
+        private void btnnew_subject_Click(object sender, EventArgs e)
         {
-            items = cboItems.Text;
-            try
+            sms_subject subject = new sms_subject("new","");
+            subject.ShowDialog();
+        }
+
+        private void dataGridView1_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0) // make sure user select at least 1 row 
             {
-                if (items == "All")
-                {
-                    sql = "select * from sch_v_staff order by Hired_Date";
-                }
-                else
-                {
-                    sql = "select top " + items + " * from sch_v_staff order by Hired_Date";
-                }
-
-                op.bindGridView(dataGridView1, sql);
-                op.autoSizeModeDataGrind(dataGridView1);
-                lb_rows.Text = "Showing : " + dataGridView1.RowCount.ToString() + " entries";
+                subjectid = dataGridView1.SelectedRows[0].Cells[0].Value + string.Empty;
             }
-            catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
 
-        private void btnexport_Click(object sender, EventArgs e)
+        private void editRecordToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           
+            sms_subject subject = new sms_subject("old", subjectid);
+            subject.ShowDialog();
         }
 
-        private void cbosearch_by_SelectedIndexChanged(object sender, EventArgs e)
+        private void refreshToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            refreshData();
         }
-       
     }
 }

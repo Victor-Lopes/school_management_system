@@ -62,6 +62,7 @@
             this.listsLevelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.roomToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.subjectToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gradeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.staffToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newStaffToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.staffListsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -128,7 +129,6 @@
             this.toolBar1 = new Design.Controls.ToolBar();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label1 = new System.Windows.Forms.Label();
-            this.gradeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnlock)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnlogout)).BeginInit();
@@ -427,6 +427,7 @@
             this.settingToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.settingToolStripMenuItem.Name = "settingToolStripMenuItem";
             this.settingToolStripMenuItem.Size = new System.Drawing.Size(60, 54);
+            this.settingToolStripMenuItem.ToolTipText = "School Information";
             // 
             // schoolsToolStripMenuItem
             // 
@@ -487,6 +488,13 @@
             this.subjectToolStripMenuItem.Text = "Subject";
             this.subjectToolStripMenuItem.Click += new System.EventHandler(this.subjectToolStripMenuItem_Click);
             // 
+            // gradeToolStripMenuItem
+            // 
+            this.gradeToolStripMenuItem.Name = "gradeToolStripMenuItem";
+            this.gradeToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.gradeToolStripMenuItem.Text = "Grade";
+            this.gradeToolStripMenuItem.Click += new System.EventHandler(this.gradeToolStripMenuItem_Click);
+            // 
             // staffToolStripMenuItem
             // 
             this.staffToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -496,18 +504,19 @@
             this.staffToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.staffToolStripMenuItem.Name = "staffToolStripMenuItem";
             this.staffToolStripMenuItem.Size = new System.Drawing.Size(60, 54);
+            this.staffToolStripMenuItem.ToolTipText = "Student Information";
             // 
             // newStaffToolStripMenuItem
             // 
             this.newStaffToolStripMenuItem.Name = "newStaffToolStripMenuItem";
-            this.newStaffToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.newStaffToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.newStaffToolStripMenuItem.Text = "New Staffs";
             this.newStaffToolStripMenuItem.Click += new System.EventHandler(this.newStaffToolStripMenuItem_Click);
             // 
             // staffListsToolStripMenuItem
             // 
             this.staffListsToolStripMenuItem.Name = "staffListsToolStripMenuItem";
-            this.staffListsToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.staffListsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.staffListsToolStripMenuItem.Text = "Lists Staff";
             this.staffListsToolStripMenuItem.Click += new System.EventHandler(this.staffListsToolStripMenuItem_Click);
             // 
@@ -520,6 +529,7 @@
             this.teacherToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.teacherToolStripMenuItem.Name = "teacherToolStripMenuItem";
             this.teacherToolStripMenuItem.Size = new System.Drawing.Size(60, 54);
+            this.teacherToolStripMenuItem.ToolTipText = "Teacher Information";
             // 
             // newTeacherToolStripMenuItem
             // 
@@ -547,6 +557,7 @@
             this.studentToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.studentToolStripMenuItem.Name = "studentToolStripMenuItem";
             this.studentToolStripMenuItem.Size = new System.Drawing.Size(60, 54);
+            this.studentToolStripMenuItem.ToolTipText = "Student Information";
             // 
             // newStudentsToolStripMenuItem
             // 
@@ -592,6 +603,7 @@
             this.paymentToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.paymentToolStripMenuItem.Name = "paymentToolStripMenuItem";
             this.paymentToolStripMenuItem.Size = new System.Drawing.Size(60, 54);
+            this.paymentToolStripMenuItem.ToolTipText = "Payment Information";
             // 
             // newPaymentToolStripMenuItem
             // 
@@ -617,6 +629,7 @@
             this.attendentToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.attendentToolStripMenuItem.Name = "attendentToolStripMenuItem";
             this.attendentToolStripMenuItem.Size = new System.Drawing.Size(60, 54);
+            this.attendentToolStripMenuItem.ToolTipText = "Atteendance Information";
             // 
             // staffsAttendenceToolStripMenuItem
             // 
@@ -653,6 +666,7 @@
             this.reportToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.reportToolStripMenuItem.Name = "reportToolStripMenuItem";
             this.reportToolStripMenuItem.Size = new System.Drawing.Size(62, 54);
+            this.reportToolStripMenuItem.ToolTipText = "Report Information";
             // 
             // staffReportToolStripMenuItem
             // 
@@ -712,6 +726,7 @@
             this.securityToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.securityToolStripMenuItem.Name = "securityToolStripMenuItem";
             this.securityToolStripMenuItem.Size = new System.Drawing.Size(60, 54);
+            this.securityToolStripMenuItem.ToolTipText = "Security Information";
             // 
             // userToolStripMenuItem
             // 
@@ -738,7 +753,7 @@
             this.helpToolStripMenuItem.ShortcutKeyDisplayString = "Ctrl+H";
             this.helpToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.H)));
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(60, 54);
-            this.helpToolStripMenuItem.ToolTipText = "Help";
+            this.helpToolStripMenuItem.ToolTipText = "Help Information";
             // 
             // viewHelpToolStripMenuItem
             // 
@@ -1157,13 +1172,6 @@
             this.label1.Size = new System.Drawing.Size(294, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "Copyright © 2017 Group One . All rights reserved.";
-            // 
-            // gradeToolStripMenuItem
-            // 
-            this.gradeToolStripMenuItem.Name = "gradeToolStripMenuItem";
-            this.gradeToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
-            this.gradeToolStripMenuItem.Text = "Grade";
-            this.gradeToolStripMenuItem.Click += new System.EventHandler(this.gradeToolStripMenuItem_Click);
             // 
             // sms_dashboard_v2
             // 

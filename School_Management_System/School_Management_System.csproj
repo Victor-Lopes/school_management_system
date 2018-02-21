@@ -320,6 +320,12 @@
     <Compile Include="sms_subject.Designer.cs">
       <DependentUpon>sms_subject.cs</DependentUpon>
     </Compile>
+    <Compile Include="sms_subject_list.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sms_subject_list.Designer.cs">
+      <DependentUpon>sms_subject_list.cs</DependentUpon>
+    </Compile>
     <Compile Include="sms_teacher_attendance.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -471,6 +477,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="sms_subject.resx">
       <DependentUpon>sms_subject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sms_subject_list.resx">
+      <DependentUpon>sms_subject_list.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="sms_teacher_attendance.resx">
       <DependentUpon>sms_teacher_attendance.cs</DependentUpon>

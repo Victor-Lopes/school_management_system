@@ -144,6 +144,7 @@
             this.cbosearch_by.Name = "cbosearch_by";
             this.cbosearch_by.Size = new System.Drawing.Size(165, 27);
             this.cbosearch_by.TabIndex = 6;
+            this.cbosearch_by.SelectedIndexChanged += new System.EventHandler(this.cbosearch_by_SelectedIndexChanged);
             // 
             // txtsearch
             // 

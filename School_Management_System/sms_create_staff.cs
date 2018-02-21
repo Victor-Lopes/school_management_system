@@ -95,8 +95,9 @@ namespace School_Management_System
             }
             finally 
             {
-                
-
+                Font font = new Font("Khmer OS Siemreap", 10.0f);
+                txtfirstname_kh.textBox1.Font = font;
+                txtlastname_kh.textBox1.Font = font; 
             }
         }
 
@@ -111,7 +112,6 @@ namespace School_Management_System
 
             cboposition.comboBox1.Items.Add("Manager");
             cboposition.comboBox1.Items.Add("Staff");
-            cboposition.comboBox1.Items.Add("Teacher");
             cboposition.comboBox1.Items.Add("Cashier");
 
             cbostatus.comboBox1.Items.Add("Start");
@@ -307,7 +307,7 @@ namespace School_Management_System
                 if (fp == null)
                 {
                     fp = Path.GetDirectoryName(Application.ExecutablePath);
-                    fp = fp + "/pos_logo.png";
+                    fp = fp + "/user.png";
                 }
                 binpic = System.IO.File.ReadAllBytes(fp);
                 ms = new MemoryStream(binpic);
@@ -355,6 +355,7 @@ namespace School_Management_System
             txtnationality.textBox1.Clear();
             txteducation_level.textBox1.Clear();
             txtemail.textBox1.Clear();
+            txtsalary.textBox1.Clear();
             txtphone.textBox1.Clear();
             txtdescription.textBox1.Clear();
 
@@ -371,6 +372,7 @@ namespace School_Management_System
             txtmother_position.textBox1.Clear();
             txtmother_phone.textBox1.Clear();
 
+            dataGridView1.Rows.Clear();
             dataGridView1.Refresh();
         }
 

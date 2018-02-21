@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label2 = new System.Windows.Forms.Label();
             this.toolBar1 = new Design.Controls.ToolBar();
             this.toolStrip1 = new Design.Controls.ToolStrip();
@@ -42,9 +43,11 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.txtyear = new Design.Controls.TextBoxLabel();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.toolStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -105,6 +108,7 @@
             this.toolStripButtonNew.Name = "toolStripButtonNew";
             this.toolStripButtonNew.Size = new System.Drawing.Size(103, 26);
             this.toolStripButtonNew.Text = "New Record";
+            this.toolStripButtonNew.Click += new System.EventHandler(this.toolStripButtonNew_Click);
             // 
             // toolStripSeparator1
             // 
@@ -119,6 +123,7 @@
             this.toolStripButtonSave.Name = "toolStripButtonSave";
             this.toolStripButtonSave.Size = new System.Drawing.Size(103, 26);
             this.toolStripButtonSave.Text = "Save Record";
+            this.toolStripButtonSave.Click += new System.EventHandler(this.toolStripButtonSave_Click);
             // 
             // toolStripSeparator2
             // 
@@ -195,6 +200,10 @@
             this.tabPage2.Text = "Lists";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // sms_year_school
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -211,6 +220,7 @@
             this.toolStrip1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -232,5 +242,6 @@
         private System.Windows.Forms.TabPage tabPage1;
         private Design.Controls.TextBoxLabel txtyear;
         private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

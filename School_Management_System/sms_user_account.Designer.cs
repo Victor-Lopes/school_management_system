@@ -226,7 +226,7 @@
             // txtconfirm_password
             // 
             this.txtconfirm_password.BackColor = System.Drawing.Color.Transparent;
-            this.txtconfirm_password.BoxWidth = 531;
+            this.txtconfirm_password.BoxWidth = 372;
             this.txtconfirm_password.LabelText = "Confirm Password :";
             this.txtconfirm_password.Location = new System.Drawing.Point(7, 278);
             this.txtconfirm_password.Margin = new System.Windows.Forms.Padding(4);
@@ -240,7 +240,7 @@
             // txtnew_password
             // 
             this.txtnew_password.BackColor = System.Drawing.Color.Transparent;
-            this.txtnew_password.BoxWidth = 531;
+            this.txtnew_password.BoxWidth = 372;
             this.txtnew_password.LabelText = "New Password :";
             this.txtnew_password.Location = new System.Drawing.Point(7, 237);
             this.txtnew_password.Margin = new System.Windows.Forms.Padding(4);
@@ -254,7 +254,7 @@
             // cbobranche
             // 
             this.cbobranche.BackColor = System.Drawing.Color.Transparent;
-            this.cbobranche.BoxWidth = 531;
+            this.cbobranche.BoxWidth = 372;
             this.cbobranche.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
             this.cbobranche.Item = null;
             this.cbobranche.LabelText = "Branche :";
@@ -267,7 +267,7 @@
             // cboschool
             // 
             this.cboschool.BackColor = System.Drawing.Color.Transparent;
-            this.cboschool.BoxWidth = 531;
+            this.cboschool.BoxWidth = 372;
             this.cboschool.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
             this.cboschool.Item = null;
             this.cboschool.LabelText = "School :";
@@ -280,7 +280,7 @@
             // cborole
             // 
             this.cborole.BackColor = System.Drawing.Color.Transparent;
-            this.cborole.BoxWidth = 531;
+            this.cborole.BoxWidth = 372;
             this.cborole.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
             this.cborole.Item = null;
             this.cborole.LabelText = "Role :";
@@ -293,7 +293,7 @@
             // txtuser_name
             // 
             this.txtuser_name.BackColor = System.Drawing.Color.Transparent;
-            this.txtuser_name.BoxWidth = 531;
+            this.txtuser_name.BoxWidth = 372;
             this.txtuser_name.LabelText = "User Name :";
             this.txtuser_name.Location = new System.Drawing.Point(7, 83);
             this.txtuser_name.Margin = new System.Windows.Forms.Padding(4);

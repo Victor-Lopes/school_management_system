@@ -86,7 +86,7 @@ namespace School_Management_System
 
         private void newTeacherToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            sms_create_teacher sms = new sms_create_teacher();
+            sms_create_teacher sms = new sms_create_teacher("","");
             showForm(sms);
         }
 
@@ -181,7 +181,7 @@ namespace School_Management_System
 
         private void subjectToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            sms_subject sms = new sms_subject();
+            sms_subject sms = new sms_subject("new","");
             showForm(sms);
         }
 

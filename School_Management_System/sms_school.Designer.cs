@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(sms_school));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.toolBar1 = new Design.Controls.ToolBar();
             this.label2 = new System.Windows.Forms.Label();
             this.toolStrip1 = new Design.Controls.ToolStrip();
@@ -46,12 +46,14 @@
             this.txtschool_name_kh = new Design.Controls.TextBoxLabel();
             this.txtschool_name_en = new Design.Controls.TextBoxLabel();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.dataGridView1 = new Design.Controls.DataGridView();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.toolStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // toolBar1
@@ -101,7 +103,7 @@
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.toolStrip1.Size = new System.Drawing.Size(890, 29);
-            this.toolStrip1.TabIndex = 62;
+            this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
             // toolStripButtonNew
@@ -112,6 +114,7 @@
             this.toolStripButtonNew.Name = "toolStripButtonNew";
             this.toolStripButtonNew.Size = new System.Drawing.Size(103, 26);
             this.toolStripButtonNew.Text = "New Record";
+            this.toolStripButtonNew.Click += new System.EventHandler(this.toolStripButtonNew_Click);
             // 
             // toolStripSeparator1
             // 
@@ -126,6 +129,7 @@
             this.toolStripButtonSave.Name = "toolStripButtonSave";
             this.toolStripButtonSave.Size = new System.Drawing.Size(103, 26);
             this.toolStripButtonSave.Text = "Save Record";
+            this.toolStripButtonSave.Click += new System.EventHandler(this.toolStripButtonSave_Click);
             // 
             // toolStripSeparator2
             // 
@@ -140,6 +144,7 @@
             this.toolStripButtonRefresh.Name = "toolStripButtonRefresh";
             this.toolStripButtonRefresh.Size = new System.Drawing.Size(78, 26);
             this.toolStripButtonRefresh.Text = "Refresh";
+            this.toolStripButtonRefresh.Click += new System.EventHandler(this.toolStripButtonRefresh_Click);
             // 
             // toolStripSeparator3
             // 
@@ -154,10 +159,12 @@
             this.toolStripButtonCancel.Name = "toolStripButtonCancel";
             this.toolStripButtonCancel.Size = new System.Drawing.Size(115, 26);
             this.toolStripButtonCancel.Text = "Cancel Record";
+            this.toolStripButtonCancel.Click += new System.EventHandler(this.toolStripButtonCancel_Click);
             // 
             // tabControl1
             // 
-            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
@@ -167,6 +174,7 @@
             this.tabControl1.Size = new System.Drawing.Size(890, 335);
             this.tabControl1.TabIndex = 63;
             this.tabControl1.TabStop = false;
+            this.tabControl1.Selected += new System.Windows.Forms.TabControlEventHandler(this.tabControl1_Selected);
             // 
             // tabPage1
             // 
@@ -189,6 +197,7 @@
             this.picureBrowers1.Path = null;
             this.picureBrowers1.Size = new System.Drawing.Size(142, 199);
             this.picureBrowers1.TabIndex = 2;
+            this.picureBrowers1.ButtonBrows += new System.EventHandler(this.picureBrowers1_ButtonBrows);
             // 
             // txtschool_name_kh
             // 
@@ -202,6 +211,7 @@
             this.txtschool_name_kh.Size = new System.Drawing.Size(517, 26);
             this.txtschool_name_kh.TabIndex = 1;
             this.txtschool_name_kh.TextBoxText = "";
+            this.txtschool_name_kh.Enter += new System.EventHandler(this.txtschool_name_kh_Enter);
             // 
             // txtschool_name_en
             // 
@@ -213,7 +223,7 @@
             this.txtschool_name_en.PasswordChar = '\0';
             this.txtschool_name_en.ReadOnly = false;
             this.txtschool_name_en.Size = new System.Drawing.Size(517, 26);
-            this.txtschool_name_en.TabIndex = 1;
+            this.txtschool_name_en.TabIndex = 0;
             this.txtschool_name_en.TextBoxText = "";
             // 
             // tabPage2
@@ -231,30 +241,24 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToResizeRows = false;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.EditRows = false;
-            this.dataGridView1.EnableHeadersVisualStyles = false;
-            this.dataGridView1.Font = new System.Drawing.Font("Khmer OS Siemreap", 9F);
-            this.dataGridView1.GridColor = System.Drawing.Color.Gainsboro;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dataGridView1.ColumnHeadersHeight = 35;
+            this.dataGridView1.Location = new System.Drawing.Point(6, 6);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.RowTemplate.Height = 30;
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(876, 303);
+            this.dataGridView1.Size = new System.Drawing.Size(868, 288);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // sms_school
             // 
@@ -267,13 +271,14 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.toolBar1);
             this.Name = "sms_school";
-            this.Text = "sms_school";
+            this.Load += new System.EventHandler(this.sms_school_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -297,6 +302,7 @@
         private Design.Controls.PicureBrowers picureBrowers1;
         private Design.Controls.TextBoxLabel txtschool_name_kh;
         private Design.Controls.TextBoxLabel txtschool_name_en;
-        private Design.Controls.DataGridView dataGridView1;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

@@ -122,7 +122,7 @@ namespace School_Management_System
             try
             {
                 setConnection();
-                sqlcmd = new SqlCommand("dbo.spRunSQL", sqlcon);
+                sqlcmd = new SqlCommand("spRunSQL", sqlcon);
                 sqlcmd.CommandType = CommandType.StoredProcedure;
                 sqlcmd.Parameters.AddWithValue("@sql", sql);
                 //Initialize the DataAdapter object 

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.toolStrip1 = new Design.Controls.ToolStrip();
             this.toolStripButtonNew = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
@@ -40,14 +41,15 @@
             this.label1 = new Design.Controls.Label();
             this.rdono = new Design.Controls.RadioButton();
             this.rdoyes = new Design.Controls.RadioButton();
-            this.txtauthor_name = new Design.Controls.TextBoxLabel();
-            this.txtedition = new Design.Controls.TextBoxLabel();
-            this.txtsubject_titile = new Design.Controls.TextBoxLabel();
-            this.txtclass = new Data.Controls.SearchBoxs();
+            this.txtdescription = new Design.Controls.TextBoxLabel();
+            this.txtsubject_name = new Design.Controls.TextBoxLabel();
             this.toolBar1 = new Design.Controls.ToolBar();
             this.label2 = new Design.Controls.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.searchButtonBoxClass = new Design.Controls.SearchButtonBox();
             this.toolStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -67,7 +69,7 @@
             this.toolStrip1.Margin = new System.Windows.Forms.Padding(0, 0, 0, 5);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStrip1.Size = new System.Drawing.Size(451, 29);
+            this.toolStrip1.Size = new System.Drawing.Size(420, 29);
             this.toolStrip1.TabIndex = 62;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -79,6 +81,7 @@
             this.toolStripButtonNew.Name = "toolStripButtonNew";
             this.toolStripButtonNew.Size = new System.Drawing.Size(103, 26);
             this.toolStripButtonNew.Text = "New Record";
+            this.toolStripButtonNew.Click += new System.EventHandler(this.toolStripButtonNew_Click);
             // 
             // toolStripSeparator1
             // 
@@ -93,6 +96,7 @@
             this.toolStripButtonSave.Name = "toolStripButtonSave";
             this.toolStripButtonSave.Size = new System.Drawing.Size(103, 26);
             this.toolStripButtonSave.Text = "Save Record";
+            this.toolStripButtonSave.Click += new System.EventHandler(this.toolStripButtonSave_Click);
             // 
             // toolStripSeparator2
             // 
@@ -127,13 +131,12 @@
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.searchButtonBoxClass);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.rdono);
             this.groupBox1.Controls.Add(this.rdoyes);
-            this.groupBox1.Controls.Add(this.txtauthor_name);
-            this.groupBox1.Controls.Add(this.txtedition);
-            this.groupBox1.Controls.Add(this.txtsubject_titile);
-            this.groupBox1.Controls.Add(this.txtclass);
+            this.groupBox1.Controls.Add(this.txtdescription);
+            this.groupBox1.Controls.Add(this.txtsubject_name);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(0, 75);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
@@ -148,7 +151,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label1.Location = new System.Drawing.Point(122, 190);
+            this.label1.Location = new System.Drawing.Point(122, 138);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(120, 17);
             this.label1.TabIndex = 5;
@@ -158,18 +161,18 @@
             // rdono
             // 
             this.rdono.AutoSize = true;
-            this.rdono.Location = new System.Drawing.Point(327, 190);
+            this.rdono.Location = new System.Drawing.Point(327, 138);
             this.rdono.Name = "rdono";
             this.rdono.Size = new System.Drawing.Size(44, 20);
             this.rdono.TabIndex = 4;
-            this.rdono.TabStop = true;
             this.rdono.Text = "No";
             this.rdono.UseVisualStyleBackColor = true;
             // 
             // rdoyes
             // 
             this.rdoyes.AutoSize = true;
-            this.rdoyes.Location = new System.Drawing.Point(262, 190);
+            this.rdoyes.Checked = true;
+            this.rdoyes.Location = new System.Drawing.Point(262, 138);
             this.rdoyes.Name = "rdoyes";
             this.rdoyes.Size = new System.Drawing.Size(50, 20);
             this.rdoyes.TabIndex = 4;
@@ -177,62 +180,33 @@
             this.rdoyes.Text = "Yes";
             this.rdoyes.UseVisualStyleBackColor = true;
             // 
-            // txtauthor_name
+            // txtdescription
             // 
-            this.txtauthor_name.BackColor = System.Drawing.Color.Transparent;
-            this.txtauthor_name.BoxWidth = 531;
-            this.txtauthor_name.LabelText = "Author name :";
-            this.txtauthor_name.Location = new System.Drawing.Point(7, 151);
-            this.txtauthor_name.Margin = new System.Windows.Forms.Padding(4);
-            this.txtauthor_name.Name = "txtauthor_name";
-            this.txtauthor_name.PasswordChar = '\0';
-            this.txtauthor_name.ReadOnly = false;
-            this.txtauthor_name.Size = new System.Drawing.Size(719, 32);
-            this.txtauthor_name.TabIndex = 3;
-            this.txtauthor_name.TextBoxText = "";
+            this.txtdescription.BackColor = System.Drawing.Color.Transparent;
+            this.txtdescription.BoxWidth = 500;
+            this.txtdescription.LabelText = "Description :";
+            this.txtdescription.Location = new System.Drawing.Point(7, 104);
+            this.txtdescription.Margin = new System.Windows.Forms.Padding(4);
+            this.txtdescription.Name = "txtdescription";
+            this.txtdescription.PasswordChar = '\0';
+            this.txtdescription.ReadOnly = false;
+            this.txtdescription.Size = new System.Drawing.Size(924, 32);
+            this.txtdescription.TabIndex = 2;
+            this.txtdescription.TextBoxText = "";
             // 
-            // txtedition
+            // txtsubject_name
             // 
-            this.txtedition.BackColor = System.Drawing.Color.Transparent;
-            this.txtedition.BoxWidth = 531;
-            this.txtedition.LabelText = "Edition :";
-            this.txtedition.Location = new System.Drawing.Point(7, 111);
-            this.txtedition.Margin = new System.Windows.Forms.Padding(4);
-            this.txtedition.Name = "txtedition";
-            this.txtedition.PasswordChar = '\0';
-            this.txtedition.ReadOnly = false;
-            this.txtedition.Size = new System.Drawing.Size(736, 32);
-            this.txtedition.TabIndex = 2;
-            this.txtedition.TextBoxText = "";
-            // 
-            // txtsubject_titile
-            // 
-            this.txtsubject_titile.BackColor = System.Drawing.Color.Transparent;
-            this.txtsubject_titile.BoxWidth = 531;
-            this.txtsubject_titile.LabelText = "Subject title :";
-            this.txtsubject_titile.Location = new System.Drawing.Point(7, 70);
-            this.txtsubject_titile.Margin = new System.Windows.Forms.Padding(4);
-            this.txtsubject_titile.Name = "txtsubject_titile";
-            this.txtsubject_titile.PasswordChar = '\0';
-            this.txtsubject_titile.ReadOnly = false;
-            this.txtsubject_titile.Size = new System.Drawing.Size(752, 33);
-            this.txtsubject_titile.TabIndex = 1;
-            this.txtsubject_titile.TextBoxText = "";
-            // 
-            // txtclass
-            // 
-            this.txtclass.Datasource = null;
-            this.txtclass.Id = null;
-            this.txtclass.LabelText = "Class * :";
-            this.txtclass.Location = new System.Drawing.Point(7, 29);
-            this.txtclass.Margin = new System.Windows.Forms.Padding(4);
-            this.txtclass.name = null;
-            this.txtclass.Name = "txtclass";
-            this.txtclass.ResultText = "";
-            this.txtclass.Size = new System.Drawing.Size(674, 33);
-            this.txtclass.TabIndex = 0;
-            this.txtclass.TableToSearch = null;
-            this.txtclass.TextBoxText = "";
+            this.txtsubject_name.BackColor = System.Drawing.Color.Transparent;
+            this.txtsubject_name.BoxWidth = 297;
+            this.txtsubject_name.LabelText = "Subject Name :";
+            this.txtsubject_name.Location = new System.Drawing.Point(7, 70);
+            this.txtsubject_name.Margin = new System.Windows.Forms.Padding(4);
+            this.txtsubject_name.Name = "txtsubject_name";
+            this.txtsubject_name.PasswordChar = '\0';
+            this.txtsubject_name.ReadOnly = false;
+            this.txtsubject_name.Size = new System.Drawing.Size(654, 33);
+            this.txtsubject_name.TabIndex = 1;
+            this.txtsubject_name.TextBoxText = "";
             // 
             // toolBar1
             // 
@@ -265,6 +239,34 @@
             this.label2.Text = "Subject Information";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // searchButtonBoxClass
+            // 
+            this.searchButtonBoxClass.BackColor = System.Drawing.Color.Transparent;
+            this.searchButtonBoxClass.Datasource = null;
+            this.searchButtonBoxClass.EnableClear = true;
+            this.searchButtonBoxClass.EnablePop = true;
+            this.searchButtonBoxClass.GridWidth1 = 60;
+            this.searchButtonBoxClass.GridWidth2 = 130;
+            this.searchButtonBoxClass.Id = "";
+            this.searchButtonBoxClass.isSearch = false;
+            this.searchButtonBoxClass.LabelText = "Class* :";
+            this.searchButtonBoxClass.Location = new System.Drawing.Point(7, 31);
+            this.searchButtonBoxClass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.searchButtonBoxClass.name = null;
+            this.searchButtonBoxClass.Name = "searchButtonBoxClass";
+            this.searchButtonBoxClass.ResultText = "";
+            this.searchButtonBoxClass.Size = new System.Drawing.Size(713, 32);
+            this.searchButtonBoxClass.SQL = null;
+            this.searchButtonBoxClass.TabIndex = 6;
+            this.searchButtonBoxClass.TableName = null;
+            this.searchButtonBoxClass.TextBoxText = "";
+            this.searchButtonBoxClass.Visible = false;
+            this.searchButtonBoxClass.ButtonSeachClick += new System.EventHandler(this.searchButtonBoxClass_ButtonSeachClick);
+            // 
             // sms_subject
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -282,6 +284,7 @@
             this.toolStrip1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -298,14 +301,14 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         public System.Windows.Forms.ToolStripButton toolStripButtonCancel;
         private Design.Controls.GroupBox groupBox1;
-        private Design.Controls.TextBoxLabel txtsubject_titile;
-        private Data.Controls.SearchBoxs txtclass;
+        private Design.Controls.TextBoxLabel txtsubject_name;
         private Design.Controls.Label label1;
         private Design.Controls.RadioButton rdono;
         private Design.Controls.RadioButton rdoyes;
-        private Design.Controls.TextBoxLabel txtauthor_name;
-        private Design.Controls.TextBoxLabel txtedition;
+        private Design.Controls.TextBoxLabel txtdescription;
         private Design.Controls.ToolBar toolBar1;
         private Design.Controls.Label label2;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private Design.Controls.SearchButtonBox searchButtonBoxClass;
     }
 }

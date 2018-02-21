@@ -28,29 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.toolStrip1 = new Design.Controls.ToolStrip();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButtonNew = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButtonSave = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButtonRefresh = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButtonCancel = new System.Windows.Forms.ToolStripButton();
             this.toolBar1 = new Design.Controls.ToolBar();
             this.label2 = new System.Windows.Forms.Label();
             this.tabControl1 = new Design.Controls.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.comboBoxLabel1 = new Design.Controls.ComboBoxLabel();
-            this.textBoxLabel1 = new Design.Controls.TextBoxLabel();
-            this.textBoxLabel2 = new Design.Controls.TextBoxLabel();
-            this.textBox1 = new Design.Controls.TextBox();
             this.label1 = new Design.Controls.Label();
+            this.txtaddress = new Design.Controls.TextBox();
+            this.txtphonenumber = new Design.Controls.TextBoxLabel();
+            this.txtbranchname = new Design.Controls.TextBoxLabel();
+            this.cboschoolname = new Design.Controls.ComboBoxLabel();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.toolStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -58,13 +64,13 @@
             this.toolStrip1.BackColor = System.Drawing.SystemColors.Window;
             this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton1,
+            this.toolStripButtonNew,
             this.toolStripSeparator1,
-            this.toolStripButton2,
+            this.toolStripButtonSave,
             this.toolStripSeparator2,
-            this.toolStripButton3,
+            this.toolStripButtonRefresh,
             this.toolStripSeparator3,
-            this.toolStripButton4});
+            this.toolStripButtonCancel});
             this.toolStrip1.Location = new System.Drawing.Point(0, 40);
             this.toolStrip1.Margin = new System.Windows.Forms.Padding(0, 0, 0, 5);
             this.toolStrip1.Name = "toolStrip1";
@@ -73,56 +79,58 @@
             this.toolStrip1.TabIndex = 64;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // toolStripButton1
+            // toolStripButtonNew
             // 
-            this.toolStripButton1.Image = global::School_Management_System.Properties.Resources.Add_Row_30px;
-            this.toolStripButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(103, 26);
-            this.toolStripButton1.Text = "New Record";
+            this.toolStripButtonNew.Image = global::School_Management_System.Properties.Resources.Add_Row_30px;
+            this.toolStripButtonNew.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButtonNew.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButtonNew.Name = "toolStripButtonNew";
+            this.toolStripButtonNew.Size = new System.Drawing.Size(103, 26);
+            this.toolStripButtonNew.Text = "New Record";
+            this.toolStripButtonNew.Click += new System.EventHandler(this.toolStripButtonNew_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 29);
             // 
-            // toolStripButton2
+            // toolStripButtonSave
             // 
-            this.toolStripButton2.Image = global::School_Management_System.Properties.Resources.Save_Row_30px;
-            this.toolStripButton2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(103, 26);
-            this.toolStripButton2.Text = "Save Record";
+            this.toolStripButtonSave.Image = global::School_Management_System.Properties.Resources.Save_Row_30px;
+            this.toolStripButtonSave.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButtonSave.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButtonSave.Name = "toolStripButtonSave";
+            this.toolStripButtonSave.Size = new System.Drawing.Size(103, 26);
+            this.toolStripButtonSave.Text = "Save Record";
+            this.toolStripButtonSave.Click += new System.EventHandler(this.toolStripButtonSave_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(6, 29);
             // 
-            // toolStripButton3
+            // toolStripButtonRefresh
             // 
-            this.toolStripButton3.Image = global::School_Management_System.Properties.Resources.Refresh_30px;
-            this.toolStripButton3.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(78, 26);
-            this.toolStripButton3.Text = "Refresh";
+            this.toolStripButtonRefresh.Image = global::School_Management_System.Properties.Resources.Refresh_30px;
+            this.toolStripButtonRefresh.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButtonRefresh.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButtonRefresh.Name = "toolStripButtonRefresh";
+            this.toolStripButtonRefresh.Size = new System.Drawing.Size(78, 26);
+            this.toolStripButtonRefresh.Text = "Refresh";
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
             this.toolStripSeparator3.Size = new System.Drawing.Size(6, 29);
             // 
-            // toolStripButton4
+            // toolStripButtonCancel
             // 
-            this.toolStripButton4.Image = global::School_Management_System.Properties.Resources.Cancel_30px;
-            this.toolStripButton4.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.Size = new System.Drawing.Size(115, 26);
-            this.toolStripButton4.Text = "Cancel Record";
+            this.toolStripButtonCancel.Image = global::School_Management_System.Properties.Resources.Cancel_30px;
+            this.toolStripButtonCancel.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButtonCancel.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButtonCancel.Name = "toolStripButtonCancel";
+            this.toolStripButtonCancel.Size = new System.Drawing.Size(115, 26);
+            this.toolStripButtonCancel.Text = "Cancel Record";
             // 
             // toolBar1
             // 
@@ -166,6 +174,7 @@
             this.tabControl1.Size = new System.Drawing.Size(849, 371);
             this.tabControl1.TabIndex = 66;
             this.tabControl1.TabStop = false;
+            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
             // tabPage1
             // 
@@ -178,25 +187,15 @@
             this.tabPage1.Text = "Add Branch";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
-            // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(841, 345);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Lists";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
             // groupBox1
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.textBoxLabel2);
-            this.groupBox1.Controls.Add(this.textBoxLabel1);
-            this.groupBox1.Controls.Add(this.comboBoxLabel1);
+            this.groupBox1.Controls.Add(this.txtaddress);
+            this.groupBox1.Controls.Add(this.txtphonenumber);
+            this.groupBox1.Controls.Add(this.txtbranchname);
+            this.groupBox1.Controls.Add(this.cboschoolname);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(0, 15);
             this.groupBox1.Name = "groupBox1";
@@ -204,53 +203,6 @@
             this.groupBox1.TabIndex = 67;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Branch Information";
-            // 
-            // comboBoxLabel1
-            // 
-            this.comboBoxLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.comboBoxLabel1.BoxWidth = 259;
-            this.comboBoxLabel1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.comboBoxLabel1.Item = null;
-            this.comboBoxLabel1.LabelText = "School Name :";
-            this.comboBoxLabel1.Location = new System.Drawing.Point(0, 20);
-            this.comboBoxLabel1.Name = "comboBoxLabel1";
-            this.comboBoxLabel1.Size = new System.Drawing.Size(541, 26);
-            this.comboBoxLabel1.TabIndex = 0;
-            // 
-            // textBoxLabel1
-            // 
-            this.textBoxLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.textBoxLabel1.BoxWidth = 259;
-            this.textBoxLabel1.LabelText = "Branch Name :";
-            this.textBoxLabel1.Location = new System.Drawing.Point(1, 52);
-            this.textBoxLabel1.Name = "textBoxLabel1";
-            this.textBoxLabel1.PasswordChar = '\0';
-            this.textBoxLabel1.ReadOnly = false;
-            this.textBoxLabel1.Size = new System.Drawing.Size(531, 26);
-            this.textBoxLabel1.TabIndex = 1;
-            this.textBoxLabel1.TextBoxText = "";
-            // 
-            // textBoxLabel2
-            // 
-            this.textBoxLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.textBoxLabel2.BoxWidth = 259;
-            this.textBoxLabel2.LabelText = "Phone Number :";
-            this.textBoxLabel2.Location = new System.Drawing.Point(0, 84);
-            this.textBoxLabel2.Name = "textBoxLabel2";
-            this.textBoxLabel2.PasswordChar = '\0';
-            this.textBoxLabel2.ReadOnly = false;
-            this.textBoxLabel2.Size = new System.Drawing.Size(531, 26);
-            this.textBoxLabel2.TabIndex = 2;
-            this.textBoxLabel2.TextBoxText = "";
-            // 
-            // textBox1
-            // 
-            this.textBox1.EnterKeys = Design.Controls.TextBox.EnterKey.String;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.textBox1.Location = new System.Drawing.Point(227, 116);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(258, 129);
-            this.textBox1.TabIndex = 3;
             // 
             // label1
             // 
@@ -262,6 +214,81 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "Address :";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // txtaddress
+            // 
+            this.txtaddress.EnterKeys = Design.Controls.TextBox.EnterKey.String;
+            this.txtaddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.txtaddress.Location = new System.Drawing.Point(227, 116);
+            this.txtaddress.Name = "txtaddress";
+            this.txtaddress.Size = new System.Drawing.Size(304, 129);
+            this.txtaddress.TabIndex = 3;
+            // 
+            // txtphonenumber
+            // 
+            this.txtphonenumber.BackColor = System.Drawing.Color.Transparent;
+            this.txtphonenumber.BoxWidth = 354;
+            this.txtphonenumber.LabelText = "Phone Number :";
+            this.txtphonenumber.Location = new System.Drawing.Point(0, 84);
+            this.txtphonenumber.Name = "txtphonenumber";
+            this.txtphonenumber.PasswordChar = '\0';
+            this.txtphonenumber.ReadOnly = false;
+            this.txtphonenumber.Size = new System.Drawing.Size(614, 26);
+            this.txtphonenumber.TabIndex = 2;
+            this.txtphonenumber.TextBoxText = "";
+            // 
+            // txtbranchname
+            // 
+            this.txtbranchname.BackColor = System.Drawing.Color.Transparent;
+            this.txtbranchname.BoxWidth = 354;
+            this.txtbranchname.LabelText = "Branch Name :";
+            this.txtbranchname.Location = new System.Drawing.Point(1, 52);
+            this.txtbranchname.Name = "txtbranchname";
+            this.txtbranchname.PasswordChar = '\0';
+            this.txtbranchname.ReadOnly = false;
+            this.txtbranchname.Size = new System.Drawing.Size(628, 26);
+            this.txtbranchname.TabIndex = 1;
+            this.txtbranchname.TextBoxText = "";
+            // 
+            // cboschoolname
+            // 
+            this.cboschoolname.BackColor = System.Drawing.Color.Transparent;
+            this.cboschoolname.BoxWidth = 354;
+            this.cboschoolname.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.cboschoolname.Item = null;
+            this.cboschoolname.LabelText = "School Name :";
+            this.cboschoolname.Location = new System.Drawing.Point(0, 20);
+            this.cboschoolname.Name = "cboschoolname";
+            this.cboschoolname.Size = new System.Drawing.Size(614, 26);
+            this.cboschoolname.TabIndex = 0;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.dataGridView1);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(841, 345);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Lists";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.dataGridView1.ColumnHeadersHeight = 35;
+            this.dataGridView1.Location = new System.Drawing.Point(6, 6);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(827, 331);
+            this.dataGridView1.TabIndex = 0;
             // 
             // sms_branch_school
             // 
@@ -275,12 +302,16 @@
             this.Controls.Add(this.toolBar1);
             this.Name = "sms_branch_school";
             this.Text = "sms_branch_school";
+            this.Load += new System.EventHandler(this.sms_branch_school_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -289,23 +320,25 @@
         #endregion
 
         private Design.Controls.ToolStrip toolStrip1;
-        public System.Windows.Forms.ToolStripButton toolStripButton1;
+        public System.Windows.Forms.ToolStripButton toolStripButtonNew;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        public System.Windows.Forms.ToolStripButton toolStripButton2;
+        public System.Windows.Forms.ToolStripButton toolStripButtonSave;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        public System.Windows.Forms.ToolStripButton toolStripButton3;
+        public System.Windows.Forms.ToolStripButton toolStripButtonRefresh;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
-        public System.Windows.Forms.ToolStripButton toolStripButton4;
+        public System.Windows.Forms.ToolStripButton toolStripButtonCancel;
         private Design.Controls.ToolBar toolBar1;
         private System.Windows.Forms.Label label2;
         private Design.Controls.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.GroupBox groupBox1;
         private Design.Controls.Label label1;
-        private Design.Controls.TextBox textBox1;
-        private Design.Controls.TextBoxLabel textBoxLabel2;
-        private Design.Controls.TextBoxLabel textBoxLabel1;
-        private Design.Controls.ComboBoxLabel comboBoxLabel1;
+        private Design.Controls.TextBox txtaddress;
+        private Design.Controls.TextBoxLabel txtphonenumber;
+        private Design.Controls.TextBoxLabel txtbranchname;
+        private Design.Controls.ComboBoxLabel cboschoolname;
         private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
